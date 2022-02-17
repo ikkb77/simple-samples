@@ -47,8 +47,8 @@ jobs:
       - name: Perform SAST Scan
         run: scancentral -url ${SC_CONTROLLER_URL} start $BUILD_OPTS -upload -application $APPLICATION -version $VERSION -uptoken $SSC_UPLOAD_TOKEN
         env:                                            
-          SC_CONTROLLER_URL: ${{ secrets.SC_CONTROLLER_URL }}
-          SSC_UPLOAD_TOKEN: ${{ secrets.SSC_UPLOAD_TOKEN }}
+          SC_CONTROLLER_URL: "http://13.209.176.153:8081/scancentral-ctrl"
+          SSC_UPLOAD_TOKEN: "6852546c-07e4-4c6a-81c5-92e9c48479da"
           APPLICATION: "sample"
           VERSION: "electron"
           BUILD_OPTS: "-bt none"
