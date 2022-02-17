@@ -51,7 +51,7 @@ jobs:
           SSC_UPLOAD_TOKEN: ${{ secrets.SSC_UPLOAD_TOKEN }}
           APPLICATION: "sample"
           VERSION: "electron"
-          BUILD_OPTS: "-bt none -o electron.zip"
+          BUILD_OPTS: "-bt none -p electron.zip"
 
       ### Archive ScanCentral Client logs on failure ###
       - name: Save ScanCentral Logs
